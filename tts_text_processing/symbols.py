@@ -1,14 +1,12 @@
 """ adapted from https://github.com/keithito/tacotron """
 
 '''
-Defines the set of symbols used in text input to the model.
-
-The default is a set of ASCII characters that works well for English or text
-that has been run through Unidecode. For other data, you can modify
-_characters.'''
+定义了模型输入中使用的符号集。
+默认情况下是一组ASCII字符，适用于英语或经过Unidecode处理的文本。对于其他数据，你可以修改_characters。
+'''
 
 def get_symbols(symbol_set):
-    if symbol_set == 'english':
+    if symbol_set == 'English':
         _punctuation = '\'.,?! '
         _special = '-'
         _letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
