@@ -1,15 +1,12 @@
 """ adapted from https://github.com/keithito/tacotron """
 
 '''
-Cleaners are transformations that run over the input text at both training and eval time.
+清洁器是在训练和评估时对输入文本运行的转换。
 
-Cleaners can be selected by passing a comma-delimited list of cleaner names as the "cleaners"
-hyperparameter. Some cleaners are English-specific. You'll typically want to use:
-    1. "english_cleaners" for English text
-    2. "transliteration_cleaners" for non-English text that can be transliterated to ASCII using
-         the Unidecode library (https://pypi.python.org/pypi/Unidecode)
-    3. "basic_cleaners" if you do not want to transliterate (in this case, you should also update
-         the symbols in symbols.py to match your data).
+可以通过将以逗号分隔的清洁器名称列表作为"cleaners"超参数来选择清洁器。一些清洁器是特定于英语的。通常情况下，你会想使用：
+1. "english_cleaners" 用于英语文本
+2. "transliteration_cleaners" 用于非英语文本，可以使用Unidecode库将其转换为ASCII（https://pypi.python.org/pypi/Unidecode）
+3. "basic_cleaners" 如果你不想进行转录（在这种情况下，你还应该更新symbols.py中的符号以匹配你的数据）。
 '''
 
 import re
@@ -18,10 +15,10 @@ from functools import reduce
 from unidecode import unidecode
 
 
-# Regular expression matching whitespace:
+# 正则表达式匹配空格：
 _whitespace_re = re.compile(r'\s+')
 
-# Regular expression separating words enclosed in curly braces for cleaning
+# 用于清洁的正则表达式，用大括号括起来的单词进行分隔
 _arpa_re = re.compile(r'{[^}]+}|\S+')
 
 
