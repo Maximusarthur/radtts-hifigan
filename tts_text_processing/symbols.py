@@ -10,7 +10,7 @@ def get_symbols(symbol_set):
         _punctuation = '\'.,?! '
         _special = '-'
         _letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
-        symbols = list(_punctuation + _special + _letters)
+        symbols = list(_letters + _special + _punctuation)
     else:
         raise Exception("{} symbol set does not exist".format(symbol_set))
 
