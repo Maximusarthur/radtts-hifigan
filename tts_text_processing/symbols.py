@@ -6,7 +6,7 @@
 '''
 
 def get_symbols(symbol_set):
-    if symbol_set == 'English':
+    if symbol_set == 'ukrainian':
         _punctuation = '\'.,?! '
         _special = '-'
         _letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
