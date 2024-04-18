@@ -7,12 +7,11 @@ The default is a set of ASCII characters that works well for English or text
 that has been run through Unidecode. For other data, you can modify
 _characters.'''
 
-
 def get_symbols(symbol_set):
-    if symbol_set == 'ukrainian':
+    if symbol_set == 'english':
         _punctuation = '\'.,?! '
-        _special = '-+'
-        _letters = 'абвгґдежзийклмнопрстуфхцчшщьюяєії'
+        _special = '-'
+        _letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
         symbols = list(_punctuation + _special + _letters)
     else:
         raise Exception("{} symbol set does not exist".format(symbol_set))
