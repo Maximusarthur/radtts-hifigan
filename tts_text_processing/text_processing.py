@@ -2,8 +2,8 @@
 
 import re
 import numpy as np
-from cleaners import Cleaner
-from symbols import get_symbols
+from .cleaners import Cleaner
+from .symbols import get_symbols
 
 
 #########
