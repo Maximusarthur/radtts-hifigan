@@ -68,7 +68,7 @@ class Cleaner(object):
         return text
 
     def get_cleaner_fns(self, cleaner_name):
-        if cleaner_name == 'ukrainian_cleaners':
+        if cleaner_name == 'English_cleaners':
             sequence_fns = [lowercase, collapse_whitespace]
             word_fns = []
         else:
